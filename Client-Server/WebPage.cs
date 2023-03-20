@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Client_Server {
+﻿namespace Client_Server {
     internal class WebPage {
         String kennung;
         String page;
         List<String> graphicFiles = new();
         public WebPage() {
-        
+
         }
         public WebPage(String kennung, String page, List<String> graphicFiles) {
             this.kennung = kennung;
