@@ -1,7 +1,6 @@
 ﻿namespace Client_Server {
     internal class Program {
         static void Main(string[] args) {
-            Client browser = new();
             Server internet = new();
             WebPage google = new("google.de", "Suche...", new List<String>());
             WebPage yahoo = new("yahoo.de", "Suche...", new List<String>());
@@ -13,12 +12,8 @@
             internet.AddPage(yahoo);
             internet.AddPage(bitlc);
             internet.AddPage(error);
-            browser.LoadPage(internet.Start());
-            browser.ShowMePage();
-            browser.ChangePage("google.de", internet);
-            browser.ShowMePage();
-            browser.ChangePage("yahoo.de", internet);
-            browser.ShowMePage();
+            Client browser = new(internet);
+
             bool bedingung = true;
             while (bedingung) {
                 Console.Write("Auf welche Seite wollen sie surfen? (\"exit\" zum beenden & \"list\" um alle Webseiten anzuzeigen) :");

@@ -16,8 +16,10 @@
             return webPages.First();
         }
         public void GetWebpageKennung() {
-            foreach (WebPage i in webPages) {
-                Console.WriteLine(i.GetKennung());
+                int x = 1;
+            foreach (WebPage i in webPages) {                
+                Console.WriteLine(x+". "+i.GetKennung());
+                x++;
             }
         }
         public WebPage SearchPage(String kennung) {
@@ -28,7 +30,7 @@
                     break;
                 }
                 else {                   
-                    ergebnis = new("Fehler 404", "...", new List<String>());
+                    ergebnis = new("Fehler 404", "Seite nicht gefunden...", new List<String>());
                 }
             }
             return ergebnis;
