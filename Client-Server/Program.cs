@@ -15,7 +15,21 @@
             browser.ShowMePage();
             browser.ChangePage("yahoo.de", internet);
             browser.ShowMePage();
-
+            bool bedingung = true;
+            while (bedingung) {
+                Console.Write("Auf welche Seite wollen sie surfen? (\"exit\" zum beenden) :");
+                string antwort = Console.ReadLine();
+                if (antwort == "exit") {
+                    bedingung = false;
+                }
+                else if (antwort != null) {
+                    browser.ChangePage(antwort, internet);
+                    browser.ShowMePage();
+                }
+                else {
+                    Console.WriteLine("Bitte eine Antwort eingeben");
+                }
+            }
         }
     }
 }

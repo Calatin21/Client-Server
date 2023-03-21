@@ -16,7 +16,7 @@
             return webPages.First();
         }
         public WebPage GetPage(String kennung) {
-            WebPage wp = null;
+            WebPage wp = new();
             foreach (WebPage i in webPages) {
                 if (i.GetKennung() == kennung) {
                     wp = i;
