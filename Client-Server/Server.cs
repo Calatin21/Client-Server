@@ -15,7 +15,7 @@
         public WebPage Start() {
             return webPages.First();
         }
-        public WebPage GetPage(String kennung) {
+        public WebPage SearchPage(String kennung) {
             WebPage wp = new();
             foreach (WebPage i in webPages) {
                 if (i.GetKennung() == kennung) {

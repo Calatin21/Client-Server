@@ -1,11 +1,11 @@
 ﻿namespace Client_Server {
     internal class Program {
         static void Main(string[] args) {
-            Client browser = new Client();
-            Server internet = new Server();
-            WebPage google = new WebPage("google.de", "Suche...", new List<String>());
-            WebPage yahoo = new WebPage("yahoo.de", "Suche...", new List<String>());
-            WebPage bitlc = new WebPage("BITLC.de", "Umschulung...", new List<String>());
+            Client browser = new();
+            Server internet = new();
+            WebPage google = new("google.de", "Suche...", new List<String>());
+            WebPage yahoo = new("yahoo.de", "Suche...", new List<String>());
+            WebPage bitlc = new("BITLC.de", "Umschulung...", new List<String>());
             internet.AddPage(google);
             internet.AddPage(yahoo);
             internet.AddPage(bitlc);

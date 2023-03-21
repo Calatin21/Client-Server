@@ -10,7 +10,7 @@
             Console.WriteLine("Bilder: " + wp.GetBilder());
         }
         public void ChangePage(String str, Server srv) {
-            this.LoadPage(srv.GetPage(str));
+            this.LoadPage(srv.SearchPage(str));
         }
     }
 }
