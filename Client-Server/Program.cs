@@ -7,6 +7,8 @@
             WebPage yahoo = new("yahoo.de", "Suche...", new List<String>());
             WebPage bitlc = new("BITLC.de", "Umschulung...", new List<String>());
             WebPage error = new("404", "ERROR...", new List<String>());
+            WebPage wiki = new("wikipedia.org", "Wissen...", new List<String>());
+            internet.AddPage(wiki);
             internet.AddPage(google);
             internet.AddPage(yahoo);
             internet.AddPage(bitlc);
