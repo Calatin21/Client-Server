@@ -21,13 +21,17 @@
             }
         }
         public WebPage SearchPage(String kennung) {
-            WebPage wp = new();
+            WebPage ergebnis = null;
             foreach (WebPage i in webPages) {
                 if (i.GetKennung() == kennung) {
-                    wp = i;
+                    ergebnis = i;
+                    break;
+                }
+                else {                   
+                    ergebnis = new("Fehler 404", "...", new List<String>());
                 }
             }
-            return wp;
+            return ergebnis;
         }
     }
 }
