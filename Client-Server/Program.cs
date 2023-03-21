@@ -19,10 +19,13 @@
             browser.ShowMePage();
             bool bedingung = true;
             while (bedingung) {
-                Console.Write("Auf welche Seite wollen sie surfen? (\"exit\" zum beenden) :");
+                Console.Write("Auf welche Seite wollen sie surfen? (\"exit\" zum beenden & \"list\" um alle Webseiten anzuzeigen) :");
                 string antwort = Console.ReadLine();
                 if (antwort == "exit") {
                     bedingung = false;
+                }
+                else if (antwort == "list") {
+                    internet.GetWebpageKennung();
                 }
                 else if (antwort != null) {
                     browser.ChangePage(antwort, internet);

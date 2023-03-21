@@ -15,6 +15,11 @@
         public WebPage Start() {
             return webPages.First();
         }
+        public void GetWebpageKennung() {
+            foreach (WebPage i in webPages) {
+                Console.WriteLine(i.GetKennung());
+            }
+        }
         public WebPage SearchPage(String kennung) {
             WebPage wp = new();
             foreach (WebPage i in webPages) {
