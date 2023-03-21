@@ -1,6 +1,6 @@
 ﻿namespace Client_Server {
     internal class Client {
-        WebPage wp;
+        WebPage wp = new();
         public void LoadPage(WebPage wp) {
             this.wp = wp;
         }

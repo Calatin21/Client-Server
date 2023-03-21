@@ -6,9 +6,11 @@
             WebPage google = new("google.de", "Suche...", new List<String>());
             WebPage yahoo = new("yahoo.de", "Suche...", new List<String>());
             WebPage bitlc = new("BITLC.de", "Umschulung...", new List<String>());
+            WebPage error = new("404", "ERROR...", new List<String>());
             internet.AddPage(google);
             internet.AddPage(yahoo);
             internet.AddPage(bitlc);
+            internet.AddPage(error);
             browser.LoadPage(internet.Start());
             browser.ShowMePage();
             browser.ChangePage("google.de", internet);
